@@ -41,7 +41,7 @@ public class BotaoSalvarListener implements ActionListener {
 		if(chkBoxAssistido.isSelected()) {
 			strAssistido = "Sim";
 		} else {
-			strAssistido = "Não";
+			strAssistido = "NÃ£o";
 		}
 		
 		if(radioBotaoPirate.isSelected()) {
@@ -51,7 +51,7 @@ public class BotaoSalvarListener implements ActionListener {
 		} else if(radioBotaoNetflix.isSelected()) {
 			strLocal = "Netflix";
 		} else {
-			strLocal = "Não definido";
+			strLocal = "NÃ£o definido";
 		}
 		
 		Filme filme = new Filme();
@@ -60,14 +60,14 @@ public class BotaoSalvarListener implements ActionListener {
 		filme.setGenero((String)cmbGenero.getSelectedItem());
 		filme.setLocal(strLocal);
 		filme.setAvaliacao(starRaterAvaliacao.getSelection());
-		filme.setAssistido(chkBoxAssistido.isSelected());
+		filme.setAssistido(strAssistido);
 		
 		if(textTitulo.getText().equals("") || cmbGenero.getSelectedItem() == null) {
 			JOptionPane.showMessageDialog(null, "Por favor, preencha os campos do filme!");
 		} else {
-			JOptionPane.showMessageDialog(null, "Título: " + filme.getTitulo() + "\nSinopse: " + filme.getSinopse() + 
-					"\nGênero: " + filme.getGenero() + "\nLocal: "+ filme.getLocal() + "\nAssistido: " + filme.getAvaliacao() +
-					"\nAvaliação: " + filme.getAvaliacao()
+			JOptionPane.showMessageDialog(null, "TÃ­tulo: " + filme.getTitulo() + "\nSinopse: " + filme.getSinopse() + 
+					"\nGÃªnero: " + filme.getGenero() + "\nLocal: "+ filme.getLocal() + "\nAssistido: " + filme.getAssistido() +
+					"\nAvaliaÃ§Ã£o: " + filme.getAvaliacao()
 					);
 		}
 		
