@@ -5,7 +5,7 @@ public class Filme {
 	private String sinopse;
 	private String genero;
 	private String local;
-	private boolean assistido;
+	private String assistido;
 	private int avaliacao;
 	
 	public String getTitulo() {
@@ -32,10 +32,10 @@ public class Filme {
 	public void setLocal(String local) {
 		this.local = local;
 	}
-	public boolean isAssistido() {
+	public String getAssistido() {
 		return assistido;
 	}
-	public void setAssistido(boolean assistido) {
+	public void setAssistido(String assistido) {
 		this.assistido = assistido;
 	}
 	public int getAvaliacao() {
@@ -44,8 +44,5 @@ public class Filme {
 	public void setAvaliacao(int avaliacao) {
 		this.avaliacao = avaliacao;
 	}
-	
-	
-	
 	
 }
